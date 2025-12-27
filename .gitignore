@@ -1,0 +1,10 @@
+# JetBrains
+/.idea/
+
+# macOS
+.DS_Store
+
+# nodejs
+/node_modules/
+/dist/
+/package-lock.json
