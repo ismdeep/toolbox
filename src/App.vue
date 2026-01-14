@@ -1,7 +1,7 @@
 <script setup>
 import TopMenu from './components/TopMenu.vue'
 import { useRoute } from 'vue-router'
-import { computed } from 'vue'
+import { computed, watchEffect } from 'vue'
 
 const route = useRoute()
 
@@ -21,11 +21,18 @@ const toolNames = {
 }
 
 const currentToolName = computed(() => {
+  if (isCountdownView.value && route.query.title) {
+    return decodeURIComponent(route.query.title)
+  }
   return toolNames[route.path] || '在线工具箱'
 })
 
 const isCountdownView = computed(() => {
   return route.path === '/countdown' && route.query.title && route.query.start && route.query.end
+})
+
+watchEffect(() => {
+  document.title = currentToolName.value
 })
 </script>
 
