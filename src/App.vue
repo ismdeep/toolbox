@@ -16,17 +16,25 @@ const toolNames = {
   '/name': '姓名生成器',
   '/password': '密码生成器',
   '/random': '随机数生成器',
-  '/key': '密钥生成器'
+  '/key': '密钥生成器',
+  '/countdown': '倒计时'
 }
 
 const currentToolName = computed(() => {
   return toolNames[route.path] || '在线工具箱'
 })
+
+const isCountdownView = computed(() => {
+  return route.path === '/countdown' && route.query.title && route.query.start && route.query.end
+})
 </script>
 
 <template>
-  <div id="globalWrapper">
-    <div class="layout">
+  <div id="globalWrapper" :class="{ 'countdown-view': isCountdownView }">
+    <template v-if="isCountdownView">
+      <router-view />
+    </template>
+    <div v-else class="layout">
       <TopMenu />
       <div class="main-content">
         <div id="content">
@@ -77,6 +85,13 @@ html, body {
   width: 100%;
   height: 100%;
   background: #f9f9f9;
+}
+
+#globalWrapper.countdown-view {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .layout {

@@ -10,6 +10,7 @@ import NameGeneratorTool from '../components/NameGeneratorTool.vue'
 import PasswordGeneratorTool from '../components/PasswordGeneratorTool.vue'
 import RandomNumberTool from '../components/RandomNumberTool.vue'
 import KeyGeneratorTool from '../components/KeyGeneratorTool.vue'
+import CountdownTool from '../components/CountdownTool.vue'
 
 const routes = [
   { path: '/', component: HomePage },
@@ -22,7 +23,8 @@ const routes = [
   { path: '/name', component: NameGeneratorTool },
   { path: '/password', component: PasswordGeneratorTool },
   { path: '/random', component: RandomNumberTool },
-  { path: '/key', component: KeyGeneratorTool }
+  { path: '/key', component: KeyGeneratorTool },
+  { path: '/countdown', component: CountdownTool }
 ]
 
 const router = createRouter({

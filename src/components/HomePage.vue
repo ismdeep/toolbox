@@ -44,6 +44,12 @@ const categories = [
       { name: '随机数生成器', path: '/random', description: '生成指定范围的随机数' },
       { name: '密钥生成器', path: '/key', description: '生成RSA、AES等加密密钥' }
     ]
+  },
+  {
+    name: '实用工具',
+    tools: [
+      { name: '倒计时', path: '/countdown', description: '倒计时' }
+    ]
   }
 ]
 </script>

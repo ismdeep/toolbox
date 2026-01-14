@@ -59,6 +59,12 @@ const categories = [
       { name: '随机数生成器', path: '/random' },
       { name: '密钥生成器', path: '/key' }
     ]
+  },
+  {
+    name: '实用工具',
+    tools: [
+      { name: '倒计时', path: '/countdown' }
+    ]
   }
 ]
 </script>
