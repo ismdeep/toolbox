@@ -63,7 +63,8 @@ const categories = [
   {
     name: '实用工具',
     tools: [
-      { name: '倒计时', path: '/countdown' }
+      { name: '倒计时', path: '/countdown' },
+      { name: '二维码', path: '/qrcode' }
     ]
   }
 ]

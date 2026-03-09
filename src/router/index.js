@@ -11,6 +11,7 @@ import PasswordGeneratorTool from '../components/PasswordGeneratorTool.vue'
 import RandomNumberTool from '../components/RandomNumberTool.vue'
 import KeyGeneratorTool from '../components/KeyGeneratorTool.vue'
 import CountdownTool from '../components/CountdownTool.vue'
+import QrCodeTool from '../components/QrCodeTool.vue'
 
 const routes = [
   { path: '/', component: HomePage },
@@ -24,7 +25,8 @@ const routes = [
   { path: '/password', component: PasswordGeneratorTool },
   { path: '/random', component: RandomNumberTool },
   { path: '/key', component: KeyGeneratorTool },
-  { path: '/countdown', component: CountdownTool }
+  { path: '/countdown', component: CountdownTool },
+  { path: '/qrcode', component: QrCodeTool }
 ]
 
 const router = createRouter({
